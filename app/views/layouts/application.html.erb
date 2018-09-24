@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>WebAmbienteLimpio</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <nav class="menu-1 lafrge-pading">
+        <h1 class="animated shake">Ambiente limpio</h1>
+         <%= image_tag('logo.png', :class => 'logo') %>
+        <ul class="no-list row center-x">
+          <li class="col-md">
+            <%= link_to "Inicio", root_path %>
+          </li>
+          <li class="col-md">
+            <%= link_to "Registrese", registrese_index_path %>
+          </li>
+          <li class="col-md">
+            <%= link_to "Ingrese", ingrese_index_path %>
+          </li>
+          <li class="col-md">
+            <%= link_to "Contactenos", contactenos_index_path %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <%= yield %>
+  </body>
+</html>
